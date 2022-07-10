@@ -1,4 +1,5 @@
 import numpy as np
+import sys, getopt
 
 def get_soundex_modified(word):
     word = word.upper()
@@ -35,3 +36,14 @@ def decode_soundex(soundex):
 def get_gibberish(sentence):
     word_list = list(map(lambda word: decode_soundex(get_soundex_modified(word.strip())), sentence.split(' ')))
     return ' '.join(word_list)
+
+if __name__ == '__main__':
+    try:
+        opts, args = getopt.getopt(sys.argv[1:],"w:",["word="])
+    except getopt.GetoptError:
+        print("python3 gibberish_generator.py -w <word>")
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt in ("-w", "--word"):
+            print(get_gibberish(arg))
+            sys.exit(0)
