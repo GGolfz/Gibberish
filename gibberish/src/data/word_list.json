@@ -1,0 +1,47 @@
+[
+  { "original": "Agile", "gibberish": "Agely" },
+  { "original": "Algorithm", "gibberish": "Alkoredm" },
+  { "original": "Attribute", "gibberish": "Atrebude" },
+  { "original": "Augmented Reality", "gibberish": "Auxnende Rilidy" },
+  { "original": "Block Chain", "gibberish": "Bluk Cen" },
+  {
+    "original": "Central Processing Unit",
+    "gibberish": "Cymtrl Prozeqin Umit"
+  },
+  { "original": "Cloud Storage", "gibberish": "Cow Sdoleg" },
+  { "original": "Compiler", "gibberish": "Conbelir" },
+  { "original": "Computer Science", "gibberish": "Cumfutyr Sjemgy" },
+  {
+    "original": "Continuous Integration / Continuous Development",
+    "gibberish": "Comtynus Intikrtuen / Comtynus Dypylovmt"
+  },
+  { "original": "Cookie", "gibberish": "Cuce" },
+  { "original": "Domain Name Server", "gibberish": "Dumem Nny Sirfer" },
+  {
+    "original": "Entity Relationship Diagram",
+    "gibberish": "Enditi Rylatyonzhip Diakam"
+  },
+  { "original": "Firewall", "gibberish": "Fywar" },
+  {
+    "original": "Hyper Text Markup Language",
+    "gibberish": "Hiper Tyx Murcuv Lenkyd"
+  },
+  { "original": "Input / Output", "gibberish": "Inbut / Oodvud" },
+  { "original": "Object Oriented", "gibberish": "Ofqeqt Orentid" },
+  { "original": "Operating System", "gibberish": "Opyrtink Syzdim" },
+  { "original": "Protocol", "gibberish": "Prutukul" },
+  { "original": "Random Access Memory", "gibberish": "Rmdon Asiz Mymore" },
+  { "original": "Round Robin", "gibberish": "Rund Robyn" },
+  { "original": "Secure Socket Layer", "gibberish": "Siqore Sukyd Lyer" },
+  { "original": "Single Sign On", "gibberish": "Syncle Syqn Om" },
+  { "original": "Stand Up Meeting", "gibberish": "Stant Ub Mytync" },
+  { "original": "Unique Resource Locator", "gibberish": "Unik Rysorx Lokatr" },
+  { "original": "User Experience", "gibberish": "Uzer Ekpyrens" },
+  { "original": "Version Control", "gibberish": "Vyrsiun Cumtrul" },
+  { "original": "Virtual Machine", "gibberish": "Virdol Mjini" },
+  {
+    "original": "Virtual Private Network",
+    "gibberish": "Vyrdul Priwet Nydwok"
+  },
+  { "original": "Website", "gibberish": "Wefside" }
+]
