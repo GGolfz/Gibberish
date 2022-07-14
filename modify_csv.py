@@ -10,4 +10,4 @@ for i in df.itertuples():
         "gibberish": i[2]
     })
 
-json.dump(data, open("giberrish/src/data/word_list.json", "w"))
+json.dump(data, open("gibberish/src/data/word_list.json", "w"))
