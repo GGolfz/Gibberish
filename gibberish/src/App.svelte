@@ -1,5 +1,6 @@
 <script>
   import Card from "./lib/Card.svelte";
+  import Instruction from "./lib/Instruction.svelte";
   import Word from "./lib/Word.svelte";
 </script>
 
@@ -8,6 +9,7 @@
     <h1>CS Gibberish Game</h1>
     <Word />
   </Card>
+  <Instruction />
 </main>
 
 <style>
