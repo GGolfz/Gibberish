@@ -1,21 +1,30 @@
-<button id="instruction-button"> i </button>
+<script>
+  let showModal = false;
+  const toggleModal = () => {
+    showModal = !showModal;
+  };
+</script>
+
 <div class="modal">
-  <div class="modal-content">
-    <div class="instruction-content">
-      <h1>Guess the Gibberish</h1>
-      <p>
-        What the player will do is to guess the word from gibberish word that
-        show in the screen.
-      </p>
-      <h2>Example</h2>
-      <p>The Gibberish word is</p>
-      <h2>Freezebuk</h2>
-      <p>The real word is</p>
-      <h2>Facebook</h2>
+  <button id="instruction-button" on:click={toggleModal}> i </button>
+  {#if showModal}
+    <div class="modal-content">
+      <div class="instruction-content">
+        <h1>Guess the Gibberish</h1>
+        <p>
+          What the player will do is to guess the word from gibberish word that
+          show in the screen.
+        </p>
+        <h2>Example</h2>
+        <p>The Gibberish word is</p>
+        <h2>Freezebuk</h2>
+        <p>The real word is</p>
+        <h2>Facebook</h2>
+      </div>
+      <h2 class="ending-word">Good Luck Have Fun!</h2>
     </div>
-    <h2 class="ending-word">Good Luck Have Fun!</h2>
-  </div>
-  <div class="modal-backdrop" />
+    <div class="modal-backdrop" on:click={toggleModal} />
+  {/if}
 </div>
 
 <style>
@@ -34,12 +43,6 @@
     right: 3rem;
     top: 3rem;
   }
-  #instruction-button:focus ~ .modal {
-    display: block;
-  }
-  .modal {
-    display: none;
-  }
   .modal-content {
     width: 50vw;
     height: 80vh;
@@ -50,7 +53,7 @@
     top: 10%;
     left: 25%;
     border-radius: 15px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
   }
@@ -69,13 +72,14 @@
     flex-direction: column;
     align-items: center;
     flex: 1 1 auto;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   .ending-word {
-    padding: 3rem
+    padding: 3rem;
   }
   h1,
-  h2 {
+  h2,
+  p {
     margin: 0;
   }
 </style>
