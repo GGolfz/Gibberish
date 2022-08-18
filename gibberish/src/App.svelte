@@ -1,21 +1,49 @@
 <script>
+  import Button from "./lib/Button.svelte";
   import Card from "./lib/Card.svelte";
   import Instruction from "./lib/Instruction.svelte";
   import Word from "./lib/Word.svelte";
+  let isStart = false;
+  let time = 180;
+  let interval = null;
+  const handleStart = () => {
+    isStart = true;
+    interval = setInterval(() => {
+      time--;
+      if (time === 0) {
+        clearInterval(interval);
+        isStart = false;
+        time = 180;
+      }
+    }, 1000);
+  };
+  const renderTime = (time) => {
+    if(time > 60) {
+      return `${Math.floor(time / 60)}:${(time % 60).toString().padStart(2, "0")}`;
+    } else {
+      return `${time}`;
+    }
+  }
 </script>
 
 <main>
   <Card>
     <h1>CS Gibberish Game</h1>
-    <Word />
+    <h2>Time: {renderTime(time)}</h2>
+    {#if isStart}
+      <Word />
+    {/if}
+    {#if !isStart}
+      <div class="button-wrapper"><Button handleClick={handleStart} text="Start Game" /></div>
+    {/if}
   </Card>
   <Instruction />
 </main>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
   :root {
-    font-family: 'Kanit', sans-serif;
+    font-family: "Kanit", sans-serif;
   }
   :global(body) {
     margin: 0;
@@ -31,11 +59,16 @@
     justify-content: center;
   }
 
-  h1 {
+  h1,h2 {
     text-transform: uppercase;
-    font-size: 2.5rem;
     font-weight: 600;
     margin: 1rem;
     color: white;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
   }
 </style>
