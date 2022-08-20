@@ -13,7 +13,7 @@
       if (time === 0) {
         clearInterval(interval);
         isStart = false;
-        time = 180;
+        time = 90;
       }
     }, 1000);
   };
