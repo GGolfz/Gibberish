@@ -4,7 +4,7 @@
   import Instruction from "./lib/Instruction.svelte";
   import Word from "./lib/Word.svelte";
   let isStart = false;
-  let time = 180;
+  let time = 90;
   let interval = null;
   const handleStart = () => {
     isStart = true;
