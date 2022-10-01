@@ -1,4 +1,4 @@
-# Gibberish Generator
+# Gibberish
 
 ## What is Gibberish?
 
